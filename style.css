@@ -1,34 +1,49 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
     background: #f4f4f4;
     color: #333;
 }
 header {
     text-align: center;
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    padding: 2rem;
+    background: linear-gradient(to right, #333, #555);
+    color: white;
 }
-header h1 {
-    margin: 0;
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    margin: 0 1rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color: #f4f4f4;
+    text-decoration: underline;
 }
 section {
     margin: 2rem auto;
     width: 90%;
     max-width: 800px;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 footer {
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem;
     background: #333;
-    color: #fff;
+    color: white;
 }
 a {
     color: #007BFF;
@@ -36,4 +51,36 @@ a {
 }
 a:hover {
     text-decoration: underline;
+}
+/* Projetos */
+.project {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.project img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+}
+.project h3 {
+    margin: 1rem 0 0.5rem;
+}
+.project p {
+    font-size: 0.9rem;
+    color: #555;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    section {
+        width: 95%;
+    }
 }
