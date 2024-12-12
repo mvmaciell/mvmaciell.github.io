@@ -1,45 +1,121 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcus Vinícius Maciel Vieira</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Marcus Vinícius, desenvolvedor front-end.">
+  <title>Portfólio - Marcus Vinícius</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">Sobre Mim</a></li>
-                <li><a href="#projects">Meus Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">&lt;/&gt;</span> Marcus Vinícius
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home" class="fullscreen-section" data-aos="fade-in">
+      <div class="text-overlay">
         <h1>Bem-vindo ao meu Portfólio</h1>
-        <p>Eu sou Marcus Vinícius, desenvolvedor web apaixonado por tecnologia!</p>
-    </header>
-    <section id="about">
+        <p>Desenvolvedor apaixonado por criar experiências digitais incríveis.</p>
+      </div>
+    </section>
+    <section id="about" class="content-section" data-aos="fade-up">
+      <div class="container">
         <h2>Sobre Mim</h2>
-        <p>Sou um desenvolvedor com experiência em JavaScript, CSS, e HTML. Gosto de criar projetos modernos e funcionais.</p>
+        <p>Sou Marcus Vinícius, um desenvolvedor front-end focado em entregar soluções modernas e funcionais. Meu objetivo é transformar ideias em projetos incríveis.</p>
+        <a href="curriculo.pdf" download class="download-btn">Baixar Currículo</a>
+      </div>
     </section>
-    <section id="projects">
+    <section id="projects" class="content-section" data-aos="fade-up">
+      <div class="container">
         <h2>Meus Projetos</h2>
-        <div class="project">
-            <img src="https://via.placeholder.com/300" alt="Imagem">
-            <h3>Projeto</h3>
-            <p>Descrição</p>
-            <a href="https://github.com/mvmaciell/projeto" target="_blank">Ver no GitHub</a>
+        <div class="projects-grid">
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="projeto1.jpg" alt="Projeto 1">
+            <div class="project-info">
+              <h3>Projeto E-commerce</h3>
+              <p>Desenvolvimento de um site completo para uma loja virtual utilizando React e Node.js.</p>
+              <a href="#" class="project-link" target="_blank">Ver Projeto</a>
+            </div>
+          </div>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <img src="projeto2.jpg" alt="Projeto 2">
+            <div class="project-info">
+              <h3>Aplicativo Mobile</h3>
+              <p>Aplicativo desenvolvido com Flutter para gestão de tarefas pessoais.</p>
+              <a href="#" class="project-link" target="_blank">Ver Projeto</a>
+            </div>
+          </div>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+            <img src="projeto3.jpg" alt="Projeto 3">
+            <div class="project-info">
+              <h3>Dashboard Analítico</h3>
+              <p>Criação de uma dashboard interativa com gráficos dinâmicos usando Python e Dash.</p>
+              <a href="#" class="project-link" target="_blank">Ver Projeto</a>
+            </div>
+          </div>
         </div>
-        <!-- Adicione mais projetos aqui -->
+      </div>
+    </section>    
+    <section id="blog" class="content-section" data-aos="fade-up">
+      <div class="container">
+        <h2>Blog</h2>
+        <article class="blog-post" data-aos="fade-in">
+          <h3>CSS-Tricks</h3>
+          <p>Excelente recurso para dicas, técnicas e notícias de última hora sobre CSS.</p>
+          <a href="https://css-tricks.com" class="read-more" target="_blank">Visitar Blog</a>
+        </article>
+        <article class="blog-post" data-aos="fade-in" data-aos-delay="300">
+          <h3>Smashing Magazine</h3>
+          <p>Artigos profundos sobre desenvolvimento web, design e tendências da indústria.</p>
+          <a href="https://www.smashingmagazine.com" class="read-more" target="_blank">Visitar Blog</a>
+        </article>
+        <article class="blog-post" data-aos="fade-in" data-aos-delay="600">
+          <h3>CodePen Blog</h3>
+          <p>Explore projetos criativos e inovadores, e aprenda mais sobre técnicas front-end.</p>
+          <a href="https://blog.codepen.io" class="read-more" target="_blank">Visitar Blog</a>
+        </article>
+      </div>
     </section>
-    <section id="contact">
+    <section id="contact" class="content-section" data-aos="fade-up">
+      <div class="container">
         <h2>Contato</h2>
-        <p>Email: <a href="mailto:mvini.maciell@gmail.com">mvini.maciell@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/mvmaciell/" target="_blank">Meu LinkedIn</a></p>
+        <form id="contact-form">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Mensagem:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
     </section>
-    <footer>
-        <p>&copy; 2024 Marcus Vinícius Maciel Vieira</p>
-    </footer>
-    <script src="script.js"></script>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Marcus Vinícius. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  </script>
 </body>
 </html>
